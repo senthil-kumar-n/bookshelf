@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css">
+    <title>BookList Page</title>
+</head>
+
+
+<body>
+
+    <p class="h3 text-center">Book Shelf</p>
+    
+    <div class="container">       
+        
+    <table class ="table table-sm table-hover">
+        <thead>
+           <td>Number</td>
+           <td>Book Name</td>
+           <td>Author</td>            
+           
+        </thead>
+
+        {% for row in rows %}
+            <tr>
+               <td>{{row["id"]}}</td>
+               <td>{{row["bookname"]}}</td>
+               <td> {{ row["author"]}}</td>
+               
+            </tr>
+         {% endfor %}
+    </table>
+</div>
+    <a href="/">Back to Home</a>
+</body>
+</html>
