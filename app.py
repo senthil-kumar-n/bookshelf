@@ -29,6 +29,7 @@ def bklist():
         rows = cur.fetchall()
         conn.close()
         print(rows)                      
+        print(searchvar)                      
         return render_template("list.html", rows = rows)
     
 
