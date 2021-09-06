@@ -28,8 +28,6 @@ def bklist():
         #cur.execute("SELECT * FROM booklist WHERE author like ? ",('%'+searchvar1+'%',))
         rows = cur.fetchall()
         conn.close()
-        print (searchvar)
-        print (searchvar1)
         print(rows)                      
         return render_template("list.html", rows = rows)
     
